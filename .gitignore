@@ -1,0 +1,9 @@
+# Editor directories and files
+.vscode/*
+
+# Large directories and files
+/_research
+
+# from rust
+Cargo.lock
+/target
