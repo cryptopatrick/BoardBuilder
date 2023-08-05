@@ -5,6 +5,17 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+# Our main.rs will simply be an entry point, while the bulk of our app logic
+# will reside in lib.rs.
+# https://doc.rust-lang.org/cargo/reference/cargo-targets.html
+path = "src/lib.rs"
+
+# We can have multiple libraries in the same repo by using the workspace feature.
+[[bin]]
+path = "src/main.rs"
+name = "backend"
+
 [dependencies]
 axum = "0.6.0"
 #tokio = { version = "1.29.1", features = ["macros", "rt-multi-thread"] }
